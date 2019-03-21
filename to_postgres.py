@@ -79,17 +79,20 @@ def push_to_psql(args, df):
         except:
             pass
 
+        offset = 0
+
         if df[col].dtype == "object":
             for index, val in enumerate(df[col]):
                 if type(val) == type("str") and "\r" in val:
                     print("---------------------------------------------------------------------------------------------")
                     bad_data_file.write("---------------------------------------------------------------------------------------------\n")
-                    print("Skipping line " + str(index) + " due to embeded carriage return in column '" + col + "':\n")
-                    bad_data_file.write("Skipping line " + str(index) + " due to embeded carriage return in column '" + col + "':\n\n")
-                    print(df.iloc[index])
-                    bad_data_file.write(str(df.iloc[index]))
+                    print("Skipping line " + str(index-offset) + " due to embeded carriage return in column '" + col + "':\n")
+                    bad_data_file.write("Skipping line " + str(index-offset) + " due to embeded carriage return in column '" + col + "':\n\n")
+                    print(df.iloc[index-offset])
+                    bad_data_file.write(str(df.iloc[index-offset]))
 
-                    df = df.drop(df.index[index])
+                    df = df.drop(df.index[index-offset])
+                    offset += 1
 
     print()
 
