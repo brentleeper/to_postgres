@@ -20,7 +20,6 @@ if psql_target_conn_str is None:
 
 parser = argparse.ArgumentParser("This tool takes input from one of many sources and creates a PostGreSQL table\n")
 
-parser.add_argument("-ip", "--database_ip", required=True, help="The IP of the database the table will be created on.")
 parser.add_argument("-s", "--schema", required=True, help="The schema the table will be created in (Schema will be created if it does not exitst)")
 parser.add_argument("-t", "--table", required=True, help="The name of the table to be created.")
 parser.add_argument("-rt", "--replace_table", required=False, help="If 'true', if a table of the same name exists, the table will be dropped and replaced.")
@@ -147,7 +146,6 @@ def create_schema(schema, psql_conn):
 def get_dataframe_from_input(args):
     input_type = args.input_type
 
-    database_ip = args.database_ip
     schema = args.schema
     table = args.table
     is_sql_file = args.sql_file.__str__().lower() == 'true'
