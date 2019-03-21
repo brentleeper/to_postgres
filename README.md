@@ -2,7 +2,8 @@
 to_postgres is a PostGreSQL loader written in python3 that takes input from all sources, cleans the data using Pandas, and pushes the data into PostGreSQL.
 
 
-```Please install required packages before executing:
+```
+Please install required packages before executing:
        Install mdbtools: ( for MS Access support )
               ubuntu: sudo apt-get install mdbtools
               macOS : brew install mdbtools
@@ -10,7 +11,7 @@ to_postgres is a PostGreSQL loader written in python3 that takes input from all 
               Run: pip3 install -r required_pkgs.txt
               
        
-   Be sure to set up your DB connections in the sql_config.py file
+Be sure to set up your DB connections in the sql_config.py file
 ```
 
 
