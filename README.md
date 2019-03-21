@@ -19,15 +19,13 @@ Be sure to set up your DB connections in the sql_config.py file
 
 usage: This tool takes input from one of many sources and creates a PostGreSQL table
 
-       [-h] -ip DATABASE_IP -s SCHEMA -t TABLE [-rt REPLACE_TABLE] -i
+       [-h] -s SCHEMA -t TABLE [-rt REPLACE_TABLE] -i
        INPUT_TYPE [-st SQL_TABLE] [-sq SQL_QUERY] [-ft FROM_TABLE]
        [-fp FILE_PATH] [-sf SQL_FILE] [-sk SQL_KIND] [-hd HEADERS]
        [-sn SHEET_NUMBER] [-cl COL_LIST [COL_LIST ...]] [-clf COL_LIST_FILE]
 
 optional arguments:
   ```-h, --help            show this help message and exit 
-  -ip DATABASE_IP, --database_ip DATABASE_IP
-                        The IP of the database the table will be created on.
   -s SCHEMA, --schema SCHEMA
                         The schema the table will be created in (Schema will
                         be created if it does not exitst)
