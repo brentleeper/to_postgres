@@ -138,7 +138,6 @@ def push_to_psql(args, df):
 def create_schema(schema, psql_conn):
     make_schema = psql_conn.cursor()
     make_schema_stmt = "CREATE SCHEMA " + schema + ";"
-    # make_schema_stmt = "CREATE SCHEMA test AUTHORIZATION taxnet;"
 
     make_schema.execute(make_schema_stmt)
 
