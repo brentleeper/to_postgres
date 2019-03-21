@@ -26,7 +26,6 @@ parser.add_argument("-rt", "--replace_table", required=False, help="If 'true', i
 parser.add_argument("-i", "--input_type", required=True, help="Available Types: XL (Excel File), CSV (CSV File), TAB (Tab Delimited Text File), JSON (JSON Text File), SQLT (SQL table), SQLQ (SQL Query)")
 parser.add_argument("-st", "--sql_table", required=False, help="The SQL table to be read when using SQLT")
 parser.add_argument("-sq", "--sql_query", required=False, help="The SQL query to be read when using SQLQ")
-parser.add_argument("-ft", "--from_table", required=False, help="The target input SQL Table when using --input_type SQLT")
 parser.add_argument("-fp", "--file_path", required=False, help="The File Path for input_types: XL, CSV, TAB, JSON, and file based SQL Databases")
 parser.add_argument("-sf", "--sql_file", required=False, help="Pass 'true' if SQLT or SQLQ will use file based SQL")
 parser.add_argument("-sk", "--sql_kind", required=False, help="Kind of SQL connection to use when obtaining data: PSQL (PostGreSQL), MSQL (MySQL), MDB (Access DB), SQLL (SQLite)")
@@ -298,10 +297,10 @@ def from_JSON(args):
 
 
 def from_SQLT(args):
-    from_table = args.from_table
+    sql_table = args.sql_table
 
-    if from_table == None or from_excel == "":
-        return "MUST SUPPLY --from_table"
+    if sql_table == None or sql_table == "":
+        return "MUST SUPPLY --sql_table"
 
     sql_type = args.sql_kind.lower()
 
