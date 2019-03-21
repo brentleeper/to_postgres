@@ -20,7 +20,7 @@ Be sure to set up your DB connections in the sql_config.py file
 usage: This tool takes input from one of many sources and creates a PostGreSQL table
 
        [-h] -s SCHEMA -t TABLE [-rt REPLACE_TABLE] -i
-       INPUT_TYPE [-st SQL_TABLE] [-sq SQL_QUERY] [-ft FROM_TABLE]
+       INPUT_TYPE [-st SQL_TABLE] [-sq SQL_QUERY]a
        [-fp FILE_PATH] [-sf SQL_FILE] [-sk SQL_KIND] [-hd HEADERS]
        [-sn SHEET_NUMBER] [-cl COL_LIST [COL_LIST ...]] [-clf COL_LIST_FILE]
 
