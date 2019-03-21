@@ -42,9 +42,6 @@ optional arguments:
                         The SQL table to be read when using SQLT
   -sq SQL_QUERY, --sql_query SQL_QUERY
                         The SQL query to be read when using SQLQ
-  -ft FROM_TABLE, --from_table FROM_TABLE
-                        The target input SQL Table when using --input_type
-                        SQLT
   -fp FILE_PATH, --file_path FILE_PATH
                         The File Path for input_types: XL, CSV, TAB, JSON, and
                         file based SQL Databases
