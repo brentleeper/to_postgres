@@ -1,6 +1,20 @@
 # to_postgres
 to_postgres is a PostGreSQL loader written in python3 that takes input from all sources, cleans the data using Pandas, and pushes the data into PostGreSQL.
 
+to_postgres is also a work in progress and I usually update it as I face a new need. Please feel free to contribute.
+
+
+```
+Please install required packages before executing:
+       Install mdbtools: ( for MS Access support )
+              ubuntu: sudo apt-get install mdbtools
+              macOS : brew install mdbtools
+       Install all Python3 Packages
+              Run: pip3 install -r required_pkgs.txt
+              
+       
+Be sure to set up your DB connections in the sql_config.py file
+```
 
 
 usage: This tool takes input from one of many sources and creates a PostGreSQL table
