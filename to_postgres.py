@@ -43,7 +43,6 @@ argss = parser.parse_args()
 missing_values = ["", "-", " ", "--", "n/a", "na", "N/A", "NA", "Na", "N/a", "n/A", "null", "NULL", "Null", "none", "NONE", "None", "nill", "NILL", "Nill"]
 
 def push_to_psql(args, df):
-    #psql_engine = create_engine("postgresql+psycopg2://welltraveled:group5@74.113.215.53:5432/welltraveled")
     psql_engine = create_engine(psql_target_conn_str)
     psql_conn = psql_engine.raw_connection()
 
