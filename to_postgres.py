@@ -11,6 +11,7 @@ from sqlalchemy import create_engine
 import dbf
 import sqlite3
 import mysql
+import re
 import pandas_access as mdb
 from sql_config import psql_target_conn_str, psql_source_conn_str, mysql_source_conn_str
 
@@ -104,7 +105,7 @@ def push_to_psql(args, df):
     cleaned_columns = []
 
     for col in columns:
-        cleaned_columns.append(col.strip().lower().replace(" ", "_"))
+        cleaned_columns.append(re.sub('[^\-_&0-9a-z]+', "", col.strip().lower().replace(" ", "_")))
 
     df.columns = cleaned_columns
 
