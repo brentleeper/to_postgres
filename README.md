@@ -10,7 +10,7 @@ Please install required packages before executing:
               ubuntu: sudo apt-get install mdbtools
               macOS : brew install mdbtools
        Install all Python3 Packages
-              Run: pip3 install -r required_pkgs.txt
+              Run: pip3 install -r requirements.txt
               
        
 Be sure to set up your DB connections in the sql_config.py file
